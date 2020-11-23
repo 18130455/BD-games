@@ -1,0 +1,9 @@
+SELECT
+games.id_game, games.game_name, games.game_genre, 
+games.game_raz, games.game_izd, game_keys.key_num, 
+game_keys.key_data_n, game_keys.key_data_o, market.market_url
+
+FROM games, game_keys, market
+WHERE game_keys.id_game = games.id_game
+and game_keys.id_market = market.id_market 
+GROUP BY games.id_game
