@@ -32,8 +32,6 @@ $sheet->getStyle('A1')->getFill()->setFillType(PHPExcel_Style_Fill::FILL_SOLID);
 $sheet->getStyle('A1')->getFill()->getStartColor()->setRGB('EEEEEE');
 $sheet->mergeCells('A1:H1');
 $sheet->getStyle('A1')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
-
-
 for($i = 0; $i < count($array); $i++){
     $sheet->setCellValueByColumnAndRow($i, 2, $array[$i]);
     $sheet->getStyleByColumnAndRow($i, 2)->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
