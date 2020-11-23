@@ -17,12 +17,10 @@ while ($row = mysqli_fetch_array($result)){
 
     echo "<td><a href='edit.php?id_market=" . $row['id_market']. "'>Редактировать</a></td>";
     echo "<td><a href='delete.php?id_market=" . $row['id_market']. "'>Удалить</a></td>";
-    echo "</tr>";
-}
+    echo "</tr>";}
 print "</table>";
 $num_rows = mysqli_num_rows($result); 
 print("<P>Всего: $num_rows </p>");
-
 ?>
 <p> <a href="http://f0472780.xsph.ru/loseva/WWW/bd_user/bd_games/index.php"> Назад </a>
 <p> <a href="new.html"> Добавить </a>
